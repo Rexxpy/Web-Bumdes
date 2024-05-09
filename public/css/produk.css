@@ -1,0 +1,44 @@
+.jenis .btn{
+    background-color: rgba(211, 12, 12, 0.185);
+}
+
+.jenis .btn:hover{
+    background-color: rgb(211, 12, 12);
+    color: aliceblue;   
+}
+
+.jenis .btn:hover img{
+    filter: none !important;  
+}
+
+.jenis img{
+    filter: invert(100%);
+}
+
+#b-produk{
+    position: absolute;
+    top:24%;
+    left:15%;
+    background-color:rgba(0, 0, 255, 0);
+    border-color:rgba(0, 0, 255, 0);
+    width:280px;
+    height:130px;
+}
+
+#gambar-produk{
+    width: 300px;
+    height: 300px;
+    border-radius:10px;
+    object-fit: cover;
+}
+
+.produk img:hover{
+	opacity: 0.7;
+	transition: 300ms;
+  }
+
+  .produk{
+    animation: fadeInUp; 
+    animation-duration: 1s; 
+  }
+

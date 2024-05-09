@@ -1,0 +1,41 @@
+body{
+    font-family: 'Poppins';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wisata .row{
+    margin-top: 50px;
+}
+
+.wisata .row{
+    position: relative;
+    text-align: center;
+    color: aliceblue;
+}
+
+.wisata h1{
+    margin-top: auto;
+    align-items: center;
+}
+
+.col-sm-auto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.col-sm-auto.image-1 {
+    width: 50%;
+    height: 450px;
+    border-radius:20px;   
+    background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.596)), url('../image/desa.jpg');
+    background-size: cover;
+    object-fit: cover;
+}
+
+footer{
+    margin-top: auto;
+}

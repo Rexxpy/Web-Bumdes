@@ -1,0 +1,43 @@
+  .b-tentang{
+	background-color: #990e0e;
+	border-color: aliceblue;
+	color:aliceblue;
+	font-weight: bold;
+  }
+
+  .b-tentang:hover{
+	border-color:#260101;
+	border-width: 13px solid;
+	font-weight: bold;
+  }
+
+  .kegiatan{
+    animation: fadeInUp; 
+    animation-duration: 1s; 
+  }
+
+  .kegiatan img{
+	width: 340px;
+	height: 270px;
+	border-radius:13px;
+	object-fit: cover;
+  }
+  .kegiatan img:hover{
+	opacity: 0.7;
+	transition: 300ms;
+  }
+
+  .kegiatan h2{
+	font-size: 40px;
+  }
+  .kegiatan h6{
+	font-size: 25px;
+  }
+  .kegiatan p{
+	font-size: 23px;
+	font-weight: 600;
+  }
+
+  a{
+	text-decoration: none;
+  }

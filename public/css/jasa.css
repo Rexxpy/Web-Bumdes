@@ -1,0 +1,9 @@
+.jasa .row{
+    margin-top: 90px;
+}
+
+.jasa img{
+	width: 100%;
+	border-radius:13px;
+	object-fit: cover;
+  }
