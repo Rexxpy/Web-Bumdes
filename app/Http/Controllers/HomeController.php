@@ -16,8 +16,14 @@ class HomeController extends Controller
                                 ->limit(3)
                                 ->get();
 
+        $dataproduk = DB::table('produk')
+                                ->orderBy('produk.created_at', 'DESC')
+                                ->limit(3)
+                                ->get();
+                               
+        
         $dataumkm = DB::table('produk')->orderBy('created_at', 'DESC') ->limit(1)->get();
 
-        return view('home')->with('datakegiatan',$datakegiatan)->with('dataumkm',$dataumkm);
+        return view('home')->with('datakegiatan',$datakegiatan)->with('dataumkm',$dataumkm)->with('dataproduk',$dataproduk);
     }
 }

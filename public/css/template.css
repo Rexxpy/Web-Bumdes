@@ -1,72 +1,47 @@
-  .container{
-	max-width: 1120px;
-	margin:auto;
-  }
-
-  .navbar.navbar-fixed-top {
+.navbar {
+	background-color: #990e0e;
+	transition: all 0.5s;
+	width: 100%;
+	height: 98px;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 	box-shadow: none !important;
-  }
+}
 
-  .nav-link,.navbar-brand{
+.nav-link,.navbar-brand{
 	color: rgb(235, 235, 235);
 	font-size: 18px;
 	font-family: 'Poppins';
 	font-weight: bold;
-  }
+}
 
-  .nav-link:hover{
+.nav-link:hover{
 	color: rgb(235, 235, 235);
 	border-bottom: 3px solid aliceblue;
 	transition: 100ms;
-  }
+}
 
-  a{
-	  color: black;
-	  font-weight: bold;
-	  text-decoration: none;
-  }
-  
-  a:hover{
-	  color: rgba(0, 0, 0, 0.87);
-	  text-decoration: none;
-  }
+.offcanvas{
+	background-color: #990e0e;
+}
 
-  .footer1{
-	background-color: #260101;
-  }
+.offcanvas-title{
+	color: rgb(235, 235, 235);
+	font-family: 'Poppins';
+	font-weight: bold;
+}
 
-  .footer1 a{
-	text-decoration: none;
-	font-weight:500;
-	color: aliceblue;
-  }
-  .footer1 a:hover{
-	color: rgba(240, 248, 255, 0.555);
-	transition: 300ms;
-  }
+.dropdown-toggle::after { 
+	transition: 1000ms;
+	content: none; 
+} 
 
-  .footer1 h5{
-	color: aliceblue;
-	font-weight:bold;
-  }
-
-  .footer2{
-	background-color: #260101;
-	border-top: 1px solid rgba(255, 255, 255, 0.24);
-	padding: 13px; 
-	color: aliceblue;    
-  }
-
-  .dropdown-toggle::after { 
-	 transition: 1000ms;
-	  content: none; 
-  } 
-
-  .dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {
 	display: block;
-  }
+}
 
-  .dropdown-menu {
+.dropdown-menu {
 	display: none;
 	position: absolute;
 	top: 50px;
@@ -74,21 +49,61 @@
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
-  }
+}
 
-  .dropdown-menu a {
+.dropdown-menu a {
 	font-weight: bold;
 	color: black;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
-  }
+}
 
-  .navbar {
-	background-color: #990e0e;
-  }
+.dropdown-item:hover {
+	color: rgb(230, 230, 230);
+	background-color: #990e0e8c;
+}
 
-  .btn-circle { 
+a{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover{
+	color: rgba(0, 0, 0, 0.87);
+	text-decoration: none;
+}
+
+.footer1{
+	background-color: #260101;
+}
+
+.footer1 a{
+	text-decoration: none;
+	font-weight:500;
+	color: aliceblue;
+}
+.footer1 a:hover{
+	color: rgba(240, 248, 255, 0.555);
+	transition: 300ms;
+}
+
+.footer1 h5{
+	color: aliceblue;
+	font-weight:bold;
+}
+
+.footer2{
+	background-color: #260101;
+	border-top: 1px solid rgba(255, 255, 255, 0.24);
+	padding: 13px; 
+	color: aliceblue;    
+}
+
+
+
+.btn-circle { 
 	width: 45px; 
 	height: 45px; 
 	padding: 6px 0px; 
@@ -96,40 +111,40 @@
 	background-color: rgba(240, 248, 255, 0);
 	border-color: aliceblue;
 	border-width: 3px;
-  } 
-  .btn-circle:hover{ 
+} 
+.btn-circle:hover{ 
 	border-color: rgba(240, 248, 255, 0.534);
 	transition: 300ms;
-  } 
+} 
 
-  .breadcrumb-chevron {
+.breadcrumb-chevron {
 	--bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
 	gap: .5rem;
-  }
-  .breadcrumb-chevron .breadcrumb-item {
+}
+.breadcrumb-chevron .breadcrumb-item {
 	display: flex;
 	gap: inherit;
 	align-items: center;
 	padding-left: 0;
 	line-height: 1;
-  }
-  .breadcrumb-chevron .breadcrumb-item::before {
+}
+.breadcrumb-chevron .breadcrumb-item::before {
 	gap: inherit;
 	float: none;
 	width: 1rem;
 	height: 1rem;
-  }
-  .breadcrumb{
-     display: flex;
-	 justify-content: center;
-	 height: 70px;
-	 background-color: #dd2c2c25;
-	 font-size: 15px;
-  }
+}
+.breadcrumb{
+	display: flex;
+	justify-content: center;
+	height: 70px;
+	background-color: #dd2c2c25;
+	font-size: 15px;
+}
 
-  .no-js #loader { display: none;  }
-  .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-  .se-pre-con {
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
 	position: fixed;
 	left: 0px;
 	top: 0px;
@@ -137,4 +152,4 @@
 	height: 100%;
 	z-index: 9999;
 	background: url('../image/loading2.gif') center no-repeat #fff;
-  }
+}

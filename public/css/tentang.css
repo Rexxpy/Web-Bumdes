@@ -22,13 +22,74 @@ body{
 
 .visi{
   margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	font-size:20px;
+	font-weight: bold;
 }
 
-.visi p{
+.content-visi{
+  margin-top: 50px;
+  max-width: 80%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-visi{
+  max-width: 50%;
+  text-align: justify;
+}
+
+.body-visi hr{
+  width: 20%;
+}
+
+.body-visi p{
   font-weight: 500;
 }
-.visi h3{
+.body-visi h3{
   font-weight: 600;
+}
+
+.gap-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gap-table td {
+  padding: 20px; 
+}
+
+.gap-table td.tab-visi {
+  padding-right: 20px; 
+}
+
+.gap-table td.tab-misi {
+  padding-left: 20px; 
+}
+
+@media screen and (max-width: 992px) {
+  
+  .content-visi{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  
+  .body-visi p{
+    font-size: 70%;
+  }
+
+  .body-visi h3{
+    font-size: 70%;
+  }
+
 }
 
 

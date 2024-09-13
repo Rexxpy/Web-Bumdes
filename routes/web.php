@@ -28,15 +28,18 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/',  [HomeController::class, 'index']);
 
 Route::get('/tentang', function () {
-    return view('tentang');
+    $navData = "Tentang BUMDES Tawar";
+    return view('tentang')->with('navData',$navData);
 });
 
 Route::get('/sto', function () {
-    return view('sto');
+    $navData = "Struktur Organisasi";
+    return view('sto')->with('navData',$navData);
 });
 
 Route::get('/kontak', function () {
-    return view('kontak');
+    $navData = "Kontak";
+    return view('kontak')->with('navData',$navData);
 });
 
 Route::get('/loginview', [LoginController::class, 'index'])->name('loginview');

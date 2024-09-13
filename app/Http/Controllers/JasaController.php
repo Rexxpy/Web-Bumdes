@@ -10,7 +10,7 @@ class JasaController extends Controller
 {
     public function index(){
         $datajasa = DB::table('jasa')->get();
-
-        return view('jasa')->with('datajasa',$datajasa);
+        $navData = "UMKM Jasa";
+        return view('jasa')->with('datajasa',$datajasa)->with('navData',$navData);
     }
 }

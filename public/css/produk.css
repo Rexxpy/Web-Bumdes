@@ -1,24 +1,64 @@
-.jenis .btn{
+.filter-produk{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.content-filter{
+    margin-inline: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem 2rem;
+}
+
+.content-filter .btn{
     background-color: rgba(211, 12, 12, 0.185);
 }
 
-.jenis .btn:hover{
+.content-filter .btn:hover{
     background-color: rgb(211, 12, 12);
     color: aliceblue;   
 }
 
-.jenis .btn:hover img{
+.content-filter .btn:hover img{
     filter: none !important;  
 }
 
-.jenis img{
+.content-filter img{
     filter: invert(100%);
 }
 
-#b-produk{
+.body-filter{
+    width: 300px;
+    height: 110px;
+    display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.body-filter button{
     position: absolute;
-    top:24%;
-    left:15%;
+}
+
+.produk{
+    animation: fadeInUp; 
+    animation-duration: 1s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-produk{
+    margin-inline: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    /* gap: 2rem 2rem; */
+}
+
+#b-produk{
     background-color:rgba(0, 0, 255, 0);
     border-color:rgba(0, 0, 255, 0);
     width:280px;
@@ -30,15 +70,38 @@
     height: 300px;
     border-radius:10px;
     object-fit: cover;
+    box-shadow: 0 4px 8px 0 #990e0e5b;
+	object-fit: cover;
+	transition: all .2s ease-in-out;
 }
 
-.produk img:hover{
-	opacity: 0.7;
+#gambar-produk:hover{
+	transform: scale(1.1);
 	transition: 300ms;
-  }
+}
 
-  .produk{
-    animation: fadeInUp; 
-    animation-duration: 1s; 
-  }
+
+@media screen and (max-width: 992px) {
+
+    .body-filter{
+        width: 400px;
+    }
+
+    .content-produk{
+        flex-direction: column;
+    }
+
+    .content-filter{
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .body-filter{
+        width: 300px;
+    }
+
+}
 

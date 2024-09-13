@@ -1,0 +1,13 @@
+.deskripsi_prod img{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius:15px;
+}
+
+.body2 video{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius:15px;
+}

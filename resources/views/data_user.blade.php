@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/template_dashboard.css">
     <link rel="stylesheet" href="css/template.css">
 
     <title>Data User | BUMDES Tawar</title>
@@ -426,12 +425,7 @@
 
 <body style="background-color: #eee5e5">
     
-      <!-- for header part -->
-	<header>
-		<div class="logosec">
-			<div class="logo">Logo BUMDES TAWAR</div>
-		</div>
-	</header>
+    @include('partial.navbarAdmin')
 
 	<div class="main-container">
 		<div class="navcontainer">

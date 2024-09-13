@@ -12,8 +12,8 @@ class WisataController extends Controller
         $datawisata = DB::table('wisata')
                             ->join('gambar_wisata', 'wisata.id', '=', 'gambar_wisata.id_wisata')
                             ->get();
-
-        return view('wisata')->with('datawisata',$datawisata);
+        $navData = "UMKM Wisata";
+        return view('wisata')->with('datawisata',$datawisata)->with('navData',$navData);
     }
 
     public function show_deskripsi($id){
@@ -22,6 +22,12 @@ class WisataController extends Controller
         ->where('wisata.id',$id)
         ->get();
 
-        return view('deskripsi_wisata')->with('datawisata',$datawisata);
+        $navData = "UMKM Wisata";
+        $navData2 = "Deskripsi Wisata";
+        return view('deskripsi_wisata', [
+            'datawisata' => $datawisata,
+            'navData' => $navData,
+            'navData2' => $navData2
+        ]);
     }
 }

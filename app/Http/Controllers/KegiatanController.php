@@ -11,8 +11,8 @@ class KegiatanController extends Controller
         $datakegiatan = DB::table('kegiatan')
                                 ->join('gambar_kegiatan', 'kegiatan.id', '=', 'gambar_kegiatan.id_kegiatan')
                                 ->get();
-
-        return view('kegiatan')->with('datakegiatan',$datakegiatan);
+        $navData = "Kegiatan";
+        return view('kegiatan')->with('datakegiatan',$datakegiatan)->with('navData',$navData);
     }
 
     public function show_deskripsi($id){
@@ -20,6 +20,13 @@ class KegiatanController extends Controller
                                 ->join('gambar_kegiatan', 'kegiatan.id', '=', 'gambar_kegiatan.id_kegiatan')
                                 ->where('kegiatan.id',$id)
                                 ->get();
-        return view('deskripsi_kegiatan')->with('datakegiatan',$datakegiatan);
+        $navData = "UMKM Kegiatan";
+        $navData2 = "Deskripsi Kegiatan";
+        return view('deskripsi_kegiatan', [
+            'datakegiatan' => $datakegiatan,
+            'navData' => $navData,
+            'navData2' => $navData2
+        ]);
+
     }
 }

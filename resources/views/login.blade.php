@@ -23,128 +23,144 @@
 
    <body style="font-family: 'Poppins';">
 
-    <nav class="navbar navbar-expand-sm">
-        <div class="container">
+   <header>
+      <nav class="navbar navbar-expand-md">
+
+        <div class="container-fluid">
           <a class="navbar-brand">
             <img src="../image/logo mojo.png" alt="logo" width="15%">
             BUMDES TAWAR
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="true" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item ms-4 dropdown">
-                {{-- <a class="nav-link" aria-current="page" href="/">Profil</a> --}}
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Profil
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/tentang">Tentang Bumdes</a>
-                  <a class="dropdown-item" href="/sto">Struktur Organisasi</a>
-                </div>
-              </li>
-              <li class="nav-item ms-4 dropdown">
-                {{-- <a class="nav-link" aria-current="page" href="/">UMKM</a> --}}
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        UMKM
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/produk">Produk</a>
-                  <a class="dropdown-item" href="#">Jasa</a>
-                  <a class="dropdown-item" href="#">Wisata</a>
-                </div>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/kegiatan">Kegiatan</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/kontak">Kontak</a>
-              </li>        
-            </ul>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profil
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/tentang">Tentang Bumdes</a>
+                    <a class="dropdown-item" href="/sto">Struktur Organisasi</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          UMKM
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/produk">Produk</a>
+                    <a class="dropdown-item" href="/jasa">Jasa</a>
+                    <a class="dropdown-item" href="#">Wisata</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/kegiatan">Kegiatan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/kontak">Kontak</a>
+                </li>        
+              </ul>
+            </div>
           </div>
+
         </div>
       </nav>
+   </header>
      
-      @if(session()->has('loginError'))
-        <div id="fail-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
-          {{ session('loginError') }}
+
+   <main>
+
+     @if(session()->has('loginError'))
+       <div id="fail-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+         {{ session('loginError') }}
+       </div>
+     @endif
+
+      <section class="wrapper mt-3 mx-auto">
+        <div class="title-text">
+           <div class="title login">
+              Login
+           </div>
+           <div class="title signup">
+              Registrasi
+           </div>
         </div>
-      @endif
+        <div class="form-container">
+           <div class="slide-controls">
+              <input type="radio" name="slide" id="login" checked>
+              <input type="radio" name="slide" id="signup">
+              <label for="login" class="slide login">Login</label>
+              <label for="signup" class="slide signup">Registrasi</label>
+              <div class="slider-tab"></div>
+           </div>
+           <div class="form-inner">
+              <form action="/login" method="POST" class="login">
+               {{csrf_field()}}
 
+                 <div class="form-floating mb-3">
+                   <input type="text" name="namapendek"  class="form-control" id="floatingInput" placeholder="Masukan Nama Pendek" required>
+                   <label for="floatingInput">Nama Pendek</label>
+                 </div>
+                 <div class="form-floating mb-3">
+                   <input type="password" name="password" id="passwordlog" class="form-control" id="floatingInput" placeholder="Masukkan password" required>
+                   <label for="floatingInput">Password</label> <i id='eyelog' class="bi bi-eye-fill"></i>
+               </div>
+                 
+               <div class="" id="lup">
+                  Lupa Password ? <a href="/gantipasswdview"><b>Klik Disini</b></a>
+               </div>
+               
+               <div class="" id="hubadmin">
+                  <b>Jika lupa nama pendek hubungi admin !</b></a>
+               </div>
 
-      <div class="wrapper mt-3">
-         <div class="title-text">
-            <div class="title login">
-               Login
-            </div>
-            <div class="title signup">
-               Registrasi
-            </div>
-         </div>
-         <div class="form-container">
-            <div class="slide-controls">
-               <input type="radio" name="slide" id="login" checked>
-               <input type="radio" name="slide" id="signup">
-               <label for="login" class="slide login">Login</label>
-               <label for="signup" class="slide signup">Registrasi</label>
-               <div class="slider-tab"></div>
-            </div>
-            <div class="form-inner">
-               <form action="/login" method="POST" class="login">
-                {{csrf_field()}}
+                 <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                 </div>
+                 <div class="signup-link">
+                    Belum Punya Akun? <a href=""><b>Daftar sekarang</b></a>
+                 </div>
+              </form>
+              <form action="/register" method="post" class="signup">
+               {{csrf_field()}}
 
-                  <div class="form-floating mb-3">
-                    <input type="text" name="namapendek"  class="form-control" id="floatingInput" placeholder="Masukan Nama Pendek" required>
-                    <label for="floatingInput">Nama Pendek</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="password" name="password" id="passwordlog" class="form-control" id="floatingInput" placeholder="Masukkan password" required>
-                    <label for="floatingInput">Password</label> <i id='eyelog' class="bi bi-eye-fill"></i>
-                </div>
-                  
-                <div class="" id="lup">
-                   Lupa Password ? <a href="/gantipasswdview"><b>Klik Disini</b></a>
-                </div>
-                
-                <div class="" id="hubadmin">
-                   <b>Jika lupa nama pendek hubungi admin !</b></a>
-                </div>
-
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Login">
-                  </div>
-                  <div class="signup-link">
-                     Belum Punya Akun? <a href=""><b>Daftar sekarang</b></a>
-                  </div>
-               </form>
-               <form action="/register" method="post" class="signup">
-                {{csrf_field()}}
-
-                  <div class="form-floating mb-3">
-                     <input type="text" name="namalengkap" class="form-control" id="floatingInput"  placeholder="Masukan Nama Lengkap"  required>
-                     <label for="floatingInput">Nama Lengkap</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="text" name="namapendek"  class="form-control" id="floatingInput" placeholder="Masukan Nama Pendek" required>
-                      <label for="floatingInput">Nama Pendek</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="password" name="password" id="passwordsign" class="form-control" id="floatingInput" placeholder="Masukkan password" required>
-                      <label for="floatingInput">Password</label><i id='eyesign' class="bi bi-eye-fill"></i>
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Daftar">
-                  </div>
-               </form>
-            </div>
-         </div>
+                 <div class="form-floating mb-3">
+                    <input type="text" name="namalengkap" class="form-control" id="floatingInput"  placeholder="Masukan Nama Lengkap"  required>
+                    <label for="floatingInput">Nama Lengkap</label>
+                   </div>
+                   <div class="form-floating mb-3">
+                     <input type="text" name="namapendek"  class="form-control" id="floatingInput" placeholder="Masukan Nama Pendek" required>
+                     <label for="floatingInput">Nama Pendek</label>
+                   </div>
+                   <div class="form-floating mb-3">
+                     <input type="password" name="password" id="passwordsign" class="form-control" id="floatingInput" placeholder="Masukkan password" required>
+                     <label for="floatingInput">Password</label><i id='eyesign' class="bi bi-eye-fill"></i>
+                 </div>
+                 <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Daftar">
+                 </div>
+              </form>
+           </div>
         </div>
+      </section>
+
+   </main>
         
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

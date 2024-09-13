@@ -203,14 +203,14 @@
         gap: 30px;
     }
 
-    .option3 {
+    .option4 {
         border-left: 5px solid #550c0c;
         background-color: var(--Border-color);
         color: white;
         cursor: pointer;
     }
 
-    .option3:hover {
+    .option4:hover {
         border-left: 5px solid #011303af;
         background-color: var(--Border-color);
     }
@@ -415,14 +415,21 @@
 						</a>
 					</div>
 
-					<div class="nav-option option2">
+                    <div class="nav-option option2">
+						<i  style="color: #A01515;" class="bi bi-person-rolodex fs-3"></i>
+						<a href="/datauser">
+							<h6>Data User</h6>
+						</a>
+					</div>
+
+					<div class="nav-option option3">
 						<i style="color: #A01515;" class="bi bi-file-earmark-check fs-3"></i>
 						<a href="/dataumkm">
 							<h6>Data UMKM</h6>
 						</a>
 					</div>
 
-					<div class="nav-option option3">
+					<div class="nav-option option4">
 						<i class="bi bi-clipboard-check fs-3"></i>
 						<a href="/datakegiatan">
 							<h6 style="color: white">Data Kegiatan</h6>

@@ -21,55 +21,68 @@
   <div class="se-pre-con"></div>
 
   <header>
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <div class="container">
-          <div class="navbar-brand">
-            <img src="../image/logo mojo.png" alt="logo" width="20%">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../image/logo mojo.png" alt="logo" width="15%">
             BUMDES TAWAR
-          </div>
-          {{-- <h3>Logo Bumdes</h3> --}}
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="true" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item ms-4 dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Profil
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/tentang">Tentang Bumdes</a>
-                  <a class="dropdown-item" href="/sto">Struktur Organisasi</a>
-                </div>
-              </li>
-              <li class="nav-item ms-4 dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        UMKM
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/produk">Produk</a>
-                  <a class="dropdown-item" href="/jasa">Jasa</a>
-                  <a class="dropdown-item" href="/wisata">Wisata</a>
-                </div>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/kegiatan">Kegiatan</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/kontak">Kontak</a>
-              </li>        
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/loginview"><i data-feather="log-in"></i></a>
-              </li>        
-            </ul>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <div class="offcanvas-body" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profil
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/tentang">Tentang Bumdes</a>
+                    <a class="dropdown-item" href="/sto">Struktur Organisasi</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          UMKM
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/produk">Produk</a>
+                    <a class="dropdown-item" href="/jasa">Jasa</a>
+                    <a class="dropdown-item" href="/wisata">Wisata</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/kegiatan">Kegiatan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/kontak">Kontak</a>
+                </li>     
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/loginview"><i data-feather="log-in"></i></a>
+                </li>        
+              </ul>
+            </div>
           </div>
+
         </div>
-      </nav>
+
+    </nav>
+
   </header>
-    
 
       <main>
 
@@ -82,45 +95,44 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="../image/desa.jpg" alt="" style="opacity: 0.4">
-                <div class="container">
+                <img class="w-100" src="../image/desa.jpg" alt="" style="opacity: 0.4">
+               
                   <div class="carousel-caption">
                     <h1 class="mt-5"><b>SELAMAT DATANG DI</b></h1>
                     <h1 class="mt-1"><b>WEBSITE BUMDES DESA TAWAR</b></h1>
                     <h5 class="mt-2"><b>Kecamatan Gondang, Kabupaten Mojokerto</b></h5>
                   </div>
-                </div>
+                
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="../image/logo mojo.png" alt="" style="opacity: 0.4">
-                <div class="container">
+                <img class="w-100" src="../image/logo mojo.png" alt="" style="opacity: 0.4">
+               
                   <div class="carousel-caption">
                     <h1>Tentang BUMDES</h1>
                     <h5 class="mb-3">Kenali sejarah dan visi misi BUMDES Desa Tawar</h5>
                     <p><a class="btn b-tentang" href="/tentang">Learn more</a></p>
                   </div>
-                </div>
+                
               </div>
               <div class="carousel-item text-center">
                 @foreach ($dataumkm as $data)                
-                  <img class="d-block w-100" src={{asset('storage/'.$data->gambar_produk)}} alt="" style="opacity: 0.4;">
+                  <img class="w-100" src="{{asset('storage/'.$data->gambar_produk)}}" alt="" style="opacity: 0.4;">
                 @endforeach
-                <div class="container">
+                
                   <div class="carousel-caption">
                     <h1>UMKM Desa Tawar</h1>
                     <h5 class="mb-3">Inspirasi Lokal, Gaya Global: Temukan Produk Terbaru Kami</h5>
                     <p><a class="btn b-tentang" href="/produk">Learn more</a></p>
                   </div>
-                </div>
+                
               </div>
             </div>
           </div>
         </section>
 
-  
         <section class="tentang">
           <div class="tentang">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                   <div class="col-md-5 text-center tentang1">
                       <img src="../image/logo mojo.png" class="img-responsive" alt="logo" style="width: 100%">
@@ -136,76 +148,93 @@
             </div>
           </div>
         </section>
-  
-        <section class="kegiatan">
-          <div class="kegiatan">
-            <div class="container">
-              <div class="head-kegiatan text-center mb-4">
-                  <h2 class="text-center"><b>Berbagai Kegiatan Kami</b></h2>
-                  <p style="font-weight:600;font-size: 20px">Jangan Lewatkan Kegiatan dan Acara Terbaru Kami</p>
-              </div>
-              <div class="row kegiatann">
-                  @foreach ($datakegiatan as $data)	
-                    <div class="body-kegiatan col-md-4 text-left">
+
+        <section class="kegiatan" id="kegiatan"> 
+          <section class="head-kegiatan">
+              <h1><b>Berbagai Kegiatan Kami</b></h1>
+              <p>Jangan Lewatkan Kegiatan dan Acara Terbaru Kami</p>
+          </section>
+          <section class="content-kegiatan">     
+              @foreach ($datakegiatan as $data)	      
+              
+                <div class="body-kegiatan">
                       <a href="{{route('deskripsi_kegiatan', [$data->id])}}">
-                        <img src={{asset('storage/'.$data->galeri_kegiatan)}} class="img-responsive" alt="logo" id="gambar-kegiatan">
+                        <img src="{{asset('storage/'.$data->galeri_kegiatan)}}" class="img-responsive" alt="logo" id="gambar-kegiatan">
                       </a>
-                      <h6 class="mt-3"><b>{{ $data->nama_kegiatan }}</b></h6>
+                      <h5><b>{{ $data->nama_kegiatan }}</b></h5>
                       <p><i class="bi bi-calendar mx-2" style="color: #990e0e"></i>{{ $data->tanggal }}</p>
-                    </div>
-                  @endforeach
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
+              @endforeach
+          </section>   
+        </section>     
+      
         <section class="stats">
-          <div class="stats text-center text-md-left mt-5 mb-5" style="font-size:20px;font-weight: bold;color: aliceblue">
-            <div class="container">
-              <div class="row">
-                  <div class="text-center mt-5 mb-5">
-                      <h1 class="text-center"><b>Statistik BUMDES Desa Tawar</b></h1>
-                      <p class="big">Info Statistik Keseluruhan Dari BUMDES Desa Tawar</p>
-                  </div>
-                  <div class="col-md-4" id="kolom">
-                    <div class="row">
-                      <div class="col-md-4 text-center">
-                        <img src="../Image/Home.png" alt="" srcset="">
-                      </div>
-                      <div class="col-md-3 text-left">
-                        <h1 id="counter" data-count="1">0</h1>
-                        <p><b>Kantor</b></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4" id="kolom">
-                    <div class="row">
-                      <div class="col-md-4 text-center">
-                        <img src="../Image/Handshake.png" alt="" srcset="">
-                      </div>
-                      <div class="col-md-3 text-left">
-                        <h1 id="counter2" data-count2="20">0</h1>
-                        <p><b>Mitra</b></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-4" id="kolom">
-                    <div class="row">
-                      <div class="col-md-4 text-center">
-                        <img src="../Image/Shop.png" alt="" srcset="">
-                      </div>
-                      <div class="col-md-3 text-left">
-                        <h1 id="counter3" data-count3="15">0</h1>
-                        <p><b>UMKM</b></p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </section>
         
+          <section class="head-stats">
+                  <h1><b>Statistik BUMDES Tawar</b></h1>
+                  <p>Info Statistik Keseluruhan Dari BUMDES Tawar. Info Lengkapnya Silahkan Berkunjung Ke Alamat Kami</p>
+          </section>
+
+          <section class="content-stats mb-4">
+              <div class="body-stats">
+                <table>
+                  <tr>
+                    <th rowspan="2"><img src="image/Home.png" alt="" srcset=""></th>
+                    <td><h5 id="counter" data-count="1"><b>0</b></h5></td>
+                  </tr>
+                  <tr>
+                    <td><p><b>Kantor</b></p></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="body-stats">
+                <table>
+                  <tr>
+                    <th rowspan="2"><img src="image/Handshake.png" alt="" srcset=""></th>
+                    <td><h5 id="counter2" data-count2="20"><b>0</b></h5></td>
+                  </tr>
+                  <tr>
+                    <td><p><b>Mitra</b></p></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="body-stats">
+                <table>
+                  <tr>
+                    <th rowspan="2"><img src="image/Shop.png" alt="" srcset=""></th>
+                    <td><h5 id="counter3" data-count3="15"><b>0</b></h5></td>
+                  </tr>
+                  <tr>
+                    <td><p><b>UMKM</b></p></td>
+                  </tr>
+                </table>
+              </div>
+          </section>
+
+        </section>
+
+        <section class="produk" id="produk"> 
+          <section class="head-produk">
+              <h1><b>Produk UMKM Tawar</b></h1>
+              <p>Produk Terbaru UMKM Tawar</p>
+          </section>
+          <section class="content-produk">     
+              @foreach ($dataproduk as $data)	      
+              
+                <div class="body-produk">
+                  <a href="{{route('deskripsi_produk', [$data->id])}}">
+                      <img src="{{asset('storage/'.$data->gambar_produk)}}" class="img-responsive" alt="gambar-produk" id="gambar-produk">
+                  </a>
+                  <div class="produk-container">
+                    <h5>{{$data->nama_produk}}</h5>
+                    <p><b>Rp. {{$data->harga}}</b></p>
+                  </div>
+                </div>
+
+              @endforeach
+          </section>   
+        </section> 
+
       </main>
 
 
@@ -271,14 +300,6 @@
           }, 100); 
         }
 
-        // window.addEventListener('scroll', ()=>{
-        //   if (window.scrollY >= 700) {
-        //       startCounter();
-        //       startCounter2();
-        //       startCounter3();
-        //     } 
-        // });
-
           startCounter();
           startCounter2();
           startCounter3();
@@ -301,7 +322,9 @@
        const elemen1 = document.querySelector('.tentang1');
        const elemen2 = document.querySelector('.tentang2');
        const elemen3 = document.querySelector('.head-kegiatan');
-       const elemen4 = document.querySelector('.kegiatann');
+       const elemen4 = document.querySelector('.content-kegiatan');
+       const elemen5 = document.querySelector('.head-produk');
+       const elemen6 = document.querySelector('.content-produk');
 
        window.addEventListener('scroll', ()=>{
           if (window.scrollY >= 80) {
@@ -321,6 +344,20 @@
             elemen4.classList.add('body-kegiatan-animate');
           }
        });
+
+       window.addEventListener('scroll', ()=>{
+          if (window.scrollY >= 1500) {
+            elemen5.classList.add('head-produk-animate');
+          }
+       });
+
+       window.addEventListener('scroll', ()=>{
+          if (window.scrollY >= 1700) {
+            elemen6.classList.add('body-produk-animate');
+          }
+       });
+
+
        
     </script>
     

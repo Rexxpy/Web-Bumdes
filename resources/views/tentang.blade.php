@@ -19,100 +19,47 @@
 
   <div class="se-pre-con"></div>
 
-    <nav class="navbar navbar-expand-sm">
-        <div class="container">
-          <a class="navbar-brand">
-            <img src="../image/logo mojo.png" alt="logo" width="15%">
-            BUMDES TAWAR
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item ms-4 dropdown">
-                {{-- <a class="nav-link" aria-current="page" href="/">Profil</a> --}}
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Profil
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/tentang">Tentang Bumdes</a>
-                  <a class="dropdown-item" href="/sto">Struktur Organisasi</a>
-                </div>
-              </li>
-              <li class="nav-item ms-4 dropdown">
-                {{-- <a class="nav-link" aria-current="page" href="/">UMKM</a> --}}
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        UMKM
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/produk">Produk</a>
-                  <a class="dropdown-item" href="/jasa">Jasa</a>
-                  <a class="dropdown-item" href="#">Wisata</a>
-                </div>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/kegiatan">Kegiatan</a>
-              </li>
-              <li class="nav-item ms-4">
-                <a class="nav-link" aria-current="page" href="/kontak">Kontak</a>
-              </li>        
-            </ul>
+  @include('partial.navbar')
+
+  <main>
+
+    <article class="sejarah">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 text-center sejarah1">
+            <img src="../image/logo mojo.png" class="img-responsive" alt="logo" style="width: 100%">
+          </div>
+            <div class="col-md-7 text-left sejarah2">
+              <h3 class="mt-4 mb-3" style="font-size: 40px"><b>Sejarah BUMDES Desa Tawar</b></h3>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Illo, maiores! Dolorem magni, esse, similique alias quas consequuntur ea nam vel obcaecati vitae deserunt.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi delectus ex rerum, aperiam aspernatur nulla beatae commodi soluta iusto quos fuga voluptates aut, sed, architecto quam fugiat. Doloremque, ex pariatur</p>
+            </div>
           </div>
         </div>
-      </nav>
+    </article>
+  
+    <article class="visi">
+  
+      <section class="head-visi">
+        <h2 class="text-center"><b>Visi Misi BUMDES TAWAR</b></h2>
+      </section>
+  
+      <section class="content-visi">
+  
+        <div class="body-visi mx-5">
+           <h3>Visi</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores excepturi atque blanditiis tenetur, velit provident modi fugit, ipsum explicabo sunt! Laudantium, maiores dicta possimus provident error voluptatem corrupti sapiente.</p>
+        </div>
+        <div class="body-visi">
+           <h3>Misi</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores excepturi atque blanditiis tenetur, velit provident modi fugit, ipsum explicabo sunt! Laudantium, maiores dicta possimus provident error voluptatem corrupti sapiente.</p>
+        </div>
+        
+      </section>
+  
+    </article>
 
-      <nav aria-label="breadcrumb">      
-        <ol class="breadcrumb breadcrumb-chevron p-3">
-          <li class="breadcrumb-item">
-            <a class="link-body-emphasis" href="/">
-              Home
-            </a>
-          </li>
-          <li class="breadcrumb-item fw-semibold active" aria-current="page">
-             Tentang BUMDES Tawar
-          </li>
-        </ol>
-    </nav>
+  </main>
       
-      <div class="sejarah">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 text-center sejarah1">
-              <img src="../image/logo mojo.png" class="img-responsive" alt="logo" style="width: 100%">
-            </div>
-              <div class="col-md-7 text-left sejarah2">
-                <h3 class="mt-4 mb-3" style="font-size: 40px"><b>Sejarah BUMDES Desa Tawar</b></h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Illo, maiores! Dolorem magni, esse, similique alias quas consequuntur ea nam vel obcaecati vitae deserunt.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi delectus ex rerum, aperiam aspernatur nulla beatae commodi soluta iusto quos fuga voluptates aut, sed, architecto quam fugiat. Doloremque, ex pariatur</p>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="visi">
-        <div class="container">
-          <div class="row" style="display: flex;justify-content:center;">
-            <h2 class="text-center"><b>Visi Misi BUMDES TAWAR</b></h2>
-            <div class="col mt-4">
-              <div class="container">
-                <div class="row" style="display: flex;justify-content:center;color:rgb(61, 61, 61);"> 
-                  <div class="col-md-5" style="margin-right: 100px">
-                    <h3>Visi</h3>
-                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Temporibus ipsa, doloribus ullam delectus magnam dolorum</p>
-                  </div>
-                  <div class="col-md-5">
-                    <h3>Misi</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Temporibus ipsa, doloribus ullam delectus magnam dolorum. Temporibus ipsa, doloribus ullam delectus magnam dolorum</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       @include('partial.footer')
 

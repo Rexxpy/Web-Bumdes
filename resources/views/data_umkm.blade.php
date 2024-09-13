@@ -460,12 +460,7 @@
 
 <body style="background-color: #eee5e5">
     
-    <!-- for header part -->
-	<header>
-        <div class="logosec">
-            <div class="logo">Logo BUMDES TAWAR</div>
-		</div>
-	</header>
+    @include('partial.navbarAdmin')
     
 	<div class="main-container">
 		<div class="navcontainer">
