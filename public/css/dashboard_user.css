@@ -1,5 +1,5 @@
 @import url(
-   "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
     margin: 0;
@@ -82,7 +82,15 @@ header {
     position: relative;
     cursor: pointer;
 }
-
+.circle {
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    background-color: #fa7bb4;
+    border-radius: 50%;
+    left: 19px;
+    top: 8px;
+}
 .dp {
     height: 40px;
     width: 40px;
@@ -180,14 +188,14 @@ header {
     gap: 30px;
 }
 
-.option3 {
+.option2 {
     border-left: 5px solid #550c0c;
     background-color: var(--Border-color);
     color: white;
     cursor: pointer;
 }
 
-.option3:hover {
+.option2:hover {
     border-left: 5px solid #011303af;
     background-color: var(--Border-color);
 }
@@ -312,7 +320,7 @@ h6{
     font-size: 17px;
 }
 
-.tgl-umkm {
+.tgl-kegiatan {
     width: 60%;
     height: 30%;
     background-color: #F8F8F8;
@@ -328,7 +336,7 @@ h6{
     color: rgba(0, 0, 0, 0.705);
     font-weight: bold;
     font-size: 20px;
-    width: 144px;
+    width: 140px;
 }
 
 #startd,#endd{
@@ -340,51 +348,22 @@ h6{
     background: #eeeeee;
 }
 
-.tampil-umkm {
-    position: absolute;
-    top: 40px;
-    left: 925px;
-    width: 30%;
-    height: 26%;
-    background-color: #F8F8F8;
-    border-radius: 15px;
-    box-shadow: 0px 4px 48.4px -10px #00000040;
-}
-
-.button-umkm .btn {
+.button-tampil .btn{
     font-size: 20px;
     color: white;
-    width: 110px;
+    width: 155px;
 }
 
-.b-produk{
+.b-tampil{
     background-color: #267E18;
 }
-.b-produk:hover{
+.b-tampil:hover{
     border-color: #267E18;
     border-width: 2px;
     color: rgb(43, 43, 43);
 }
 
-.b-jasa{
-    background-color: #325CAD;
-}
-.b-jasa:hover{
-    border-color: #325CAD;
-    border-width: 2px;
-    color: rgb(43, 43, 43);
-}
-
-.b-wisata{
-    background-color: #FF4D02;
-}
-.b-wisata:hover{
-    border-color: #FF4D02;
-    border-width: 2px;
-    color: rgb(43, 43, 43);
-}
-
-.data-umkm .btn {
+.data-kegiatan .btn {
     font-size: 20px;
     color: white;
     width: 215px;
@@ -404,17 +383,11 @@ th{
     vertical-align: middle;
 }
 
-#tabelproduk thead th{
+#tabeluser thead th{
     background-color: #270a0a;
     color: white;
-}
-#tabeljasa thead th{
-    background-color: #270a0a;
-    color: white;
-}
-#tabelwisata thead th{
-    background-color: #270a0a;
-    color: white;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .b-edit{
@@ -433,12 +406,4 @@ th{
 
 .b-delete:hover{
     border-color: #270a0a;
-}
-
-#label-table{
-    background-color: rgba(0, 0, 255, 0);
-    border-color: rgba(0, 0, 255, 0);
-    color: #0c007d00;
-    width: 20%;
-    display: inline-block;
 }
